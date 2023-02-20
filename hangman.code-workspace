@@ -1,0 +1,43 @@
+{
+	"folders": [
+		{
+			"path": "../../Pierwszy projekt"
+		},
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../Projekt Blog"
+		},
+		{
+			"path": "../../frontendmentor"
+		},
+		{
+			"path": "../../../git"
+		},
+		{
+			"path": "../../../../c++"
+		},
+		{
+			"path": "../../theme"
+		},
+		{
+			"path": "../../../../../../../xampp/htdocs/wordpress/wp-content/themes/newsletter-sportowy"
+		},
+		{
+			"path": "../../../../../Pictures/newsletter sport - project/ns_ghost"
+		},
+		{
+			"path": "../../../../../../../xampp/htdocs/wordpress/wp-content/themes/newsletter"
+		},
+		{
+			"path": "../../../../../../../xampp/htdocs/wordpress/wp-content/themes/futurio-child"
+		},
+		{
+			"path": "../../../../../../../xampp/htdocs/wordpress/wp-content/themes/astra-child"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Próbnik"
+	}
+}

@@ -1,0 +1,224 @@
+/* ============== DEFAULT ============== */
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	color: #707070;
+	font-family: "Inconsolata", monospace;
+}
+
+/* ============== MOBILE ============== */
+
+.wrapper {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	justify-content: space-between;
+}
+
+.category {
+	background-color: #ffb156;
+	border: 2px solid #f1901f;
+	border-radius: 5px;
+	box-shadow: 0 3px 0 #f1901f;
+	color: #fff;
+	display: inline-block;
+	font-size: 1.3rem;
+	margin: 2vh 2vw;
+	padding: 0.2rem 1rem;
+}
+
+.board {
+	font-size: 1.5rem;
+	letter-spacing: 5px;
+	margin: 2rem 10px 0;
+	text-align: center;
+	transition: 0.5s;
+	width: 100%;
+}
+
+.hangman {
+	min-height: 220px;
+	text-align: center;
+}
+
+.hangman__image {
+	max-height: 220px;
+	max-width: 220px;
+	width: 100%;
+}
+
+.keyboard {
+	align-items: flex-end;
+	bottom: 3rem;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 5px;
+	justify-content: space-between;
+	padding: 0 10px;
+	margin-bottom: 10vh;
+}
+
+.char {
+	align-items: center;
+	background-color: #fff;
+	border: 2px solid #707070;
+	border-radius: 10px;
+	box-shadow: 0 3px 0 #707070;
+	cursor: pointer;
+	color: #707070;
+	height: calc((100vw - 2rem) / 7 - 7px);
+	justify-content: center;
+	width: calc((100vw - 2rem) / 11.5 - 7px);
+}
+
+.hit {
+	background-color: #C7FFC7;
+	border-color: #00C000;
+	color: #00C000;
+    cursor: auto;
+}
+
+.missed {
+	background-color: #FFBBBB;
+	border-color: #C00000;
+	color: #C00000;
+    cursor: auto;
+}
+
+.modal {
+	background-color: rgba(255, 255, 255, 0.9);
+	border-radius: 25px;
+	border: 3px solid #303030;
+	bottom: 5vh;
+	display: none;
+	height: 30vh;
+	left: 5vw;
+	overflow: auto;
+	position: absolute;
+	width: 90%;
+	z-index: 1;
+}
+
+.modal__content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    height: 100%;
+    justify-content: center;
+}
+
+.modal__content--headline {
+    font-size: 2.5rem;
+}
+
+.modal__content--btn {
+	border-radius: 5px;
+	color: #fff;
+	font-size: 0.8rem;
+	padding: 0.5rem 1rem;
+}
+
+/* ============== TABLET ============== */
+
+@media screen and (min-width: 481px) {
+    .board {
+        font-size: 2.2rem;
+        letter-spacing: 7px;
+    }
+    
+    .hangman {
+        min-height: 420px;
+    }
+    
+    .hangman__image {
+        max-height: 420px;
+        max-width: 420px;
+    }
+
+    .keyboard {
+        gap: 10px;
+        padding: 0 1rem;
+    }
+
+    .char {
+        font-size: 1.5rem;
+        width: calc((100vw - 2rem) / 13 - 9px);
+    }
+
+    .modal__content--headline {
+        font-size: 3.2rem;
+    }
+
+    .modal__content--text {
+        font-size: 2rem;
+    }
+    
+    .modal__content--btn {
+        font-size: 2.2rem;
+    }
+}
+
+/* ============== LAPTOP ============== */
+
+@media screen and (min-width: 769px) {
+    .hangman {
+        align-self: center;
+        height: 40vw;
+        margin-top: 20px;
+        width: 40vw;
+    } 
+
+    .char {
+        height: 6vh;
+        width: 5vw;
+    }
+}
+
+/* ============== SCREEN ============== */
+@media screen and (min-width: 1025px) {
+    .wrapper {
+        display: grid;
+        grid-template-areas: 
+        "info keyboard"
+        "board keyboard"
+        "image keyboard";
+        overflow: hidden;
+    }
+ 
+    .category {
+        grid-area: info;
+    }
+    
+    .board {
+        align-self: center;
+        grid-area: board;
+        width: 48.5vw;
+    }
+    
+    .hangman {
+        grid-area: image;
+        width: 48.5vw;
+    } 
+
+    .keyboard {
+        align-content: center;
+        grid-area: keyboard;
+        justify-content: center;
+        width: 48.5vw;
+        /* max-width: 50vw; */
+        margin-bottom: 0;
+    }
+
+    .char {
+        height: calc((48.5vw - 2rem - 6 * 10px ) / 7);
+        width: calc((48.5vw - 2rem - 6 * 10px ) / 7);
+    }
+}
